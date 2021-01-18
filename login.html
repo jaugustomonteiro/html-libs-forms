@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="libs/slimselect/slimselect.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Login</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="container-form-email" class="container-fluid h-100 w-100 bg-secondary d-flex flex-column justify-content-center align-items-center">
+      <form id="JamlFormLogin" class="jaml-restricted-form" style="width: min(400px, 100%)">
+        <div class="jaml-form-recover-header d-flex flex-column align-items-center">
+          <img class="img-fluid mb-3" src="img/logo.png" alt="Logo" style="width: 120px" />
+          <h2 class="mb-4 text-center">Faça seu Login</h2>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-email" placeholder="Seu E-mail" style="height: 50px" />
+            <small class="form-text text-danger d-none">E-mail obrigatório e/ou inválido</small>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="password" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-text" placeholder="Sua Senha" style="height: 50px" />
+            <small class="form-text text-danger d-none">CPF obrigatório e/ou inválido</small>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-block mb-1" style="height: 50px; background: #392466; color: #fff; font-weight: bold">Entrar</button>
+
+        <p class="font-italic jaml-restricted-message mt-1" style="height: 60px; font-size: 0.8rem"></p>
+
+        <div class="d-flex justify-content-between jaml-recover-login">
+          <span class="d-flex align-items-center">
+            <i class="bx bx-exit mr-1" style="font-size: 20px"></i>
+            <a href="#">Criar Conta</a>
+          </span>
+          <span class="d-flex align-items-center">
+            <i class="bx bxs-lock-alt mr-1" style="font-size: 20px"></i>
+            <a href="#">Esqueci minha Senha</a>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/jquery/jquery.mask.js"></script>
+    <script src="libs/slimselect/slimselect.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jaml-restricted-functions-global.js"></script>
+    <script>
+      (function ($) {
+        var JamlFormLogin = $("#JamlFormLogin");
+
+        JamlFormLogin.find("button").on("click", function (e) {
+          e.preventDefault();
+          if (validateFormRestrictedAccess(JamlFormLogin)) {
+            alert("Form Recover");
+          }
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>

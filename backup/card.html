@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="libs/slimselect/slimselect.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .jaml-play-video:hover {
+        cursor: pointer;
+        color: #fff !important;
+        opacity: 1 !important;
+      }
+    </style>
+    <div class="container p-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control jaml-input-video-search" placeholder="Palestrante ou Tema" />
+        <div class="input-group-append">
+          <span class="input-group-text" style="background: #392466"><i class="bx bx-search text-white"></i></span>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 jaml-video-list">
+        <div class="col mb-4">
+          <div class="card h-100 position-relative jaml-container-videos">
+            <div style="width: 100%; height: 200px; background: url('img/maxresdefault.jpg') no-repeat center center; background-size: cover"></div>
+            <div style="position: absolute; width: 100%; height: 100%; background: transparent; display: flex; align-items: center; justify-content: center">
+              <i class="bx bx-play-circle jaml-play-video" style="font-size: 80px; color: #ccc; opacity: 0.5; transition: all 0.5s"></i>
+            </div>
+            <input type="hidden" class="jaml-container-video-url" value="cksDd7-5NJw" />
+            <strong class="d-none">Diego Cunha e Eduardo Neves</strong>
+            <p class="d-none">Certezas e incertezas das eleições 2020</p>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card h-100 position-relative jaml-container-videos">
+            <div style="width: 100%; height: 200px; background: url('img/inteligência_emocional_nas_eleições-parte1.jpg') no-repeat center center; background-size: cover"></div>
+            <div style="position: absolute; width: 100%; height: 100%; background: transparent; display: flex; align-items: center; justify-content: center">
+              <i class="bx bx-play-circle jaml-play-video" style="font-size: 80px; color: #ccc; opacity: 0.5; transition: all 0.5s"></i>
+            </div>
+            <input type="hidden" class="jaml-container-video-url" value="gHyD5ybPSEY" />
+            <strong class="d-none">Marçal Siqueira</strong>
+            <p class="d-none">Inteligência emocional nas eleições – Parte 1</p>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card h-100 position-relative jaml-container-videos">
+            <div style="width: 100%; height: 200px; background: url('img/inteligência_emocional_nas_eleições-parte2.jpg') no-repeat center center; background-size: cover"></div>
+            <div style="position: absolute; width: 100%; height: 100%; background: transparent; display: flex; align-items: center; justify-content: center">
+              <i class="bx bx-play-circle jaml-play-video" style="font-size: 80px; color: #ccc; opacity: 0.5; transition: all 0.5s"></i>
+            </div>
+            <input type="hidden" class="jaml-container-video-url" value="9a5E4GpWNUM" />
+            <strong class="d-none">Marçal Siqueira</strong>
+            <p class="d-none">Inteligência emocional nas eleições – Parte 2</p>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card h-100 position-relative jaml-container-videos">
+            <div style="width: 100%; height: 200px; background: url('img/desincompatibilização_e_convenções_municipais.jpg') no-repeat center center; background-size: cover"></div>
+            <div style="position: absolute; width: 100%; height: 100%; background: transparent; display: flex; align-items: center; justify-content: center">
+              <i class="bx bx-play-circle jaml-play-video" style="font-size: 80px; color: #ccc; opacity: 0.5; transition: all 0.5s"></i>
+            </div>
+            <input type="hidden" class="jaml-container-video-url" value="Fk1PxMgkNSY" />
+            <strong class="d-none">Dr. Herman e Igor Soares</strong>
+            <p class="d-none">Desincompatibilização e convenções municipais</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="JAMLModalVideos" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/jquery/jquery.mask.js"></script>
+    <script src="libs/slimselect/slimselect.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/videos.js"></script>
+  </body>
+</html>

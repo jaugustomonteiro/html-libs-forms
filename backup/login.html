@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="libs/slimselect/slimselect.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      .jaml-support-login a {
+        text-decoration: none;
+        color: #575757;
+        font-weight: bold;
+      }
+
+      .jaml-support-login a:hover {
+        text-decoration: none;
+        color: #101010;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container-form-email" class="container-fluid h-100 w-100 bg-secondary d-flex flex-column justify-content-center align-items-center">
+      <h2>Área Restrita</h2>
+      <form id="JamlFormLogin" style="width: min(400px, 100%)">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-email" placeholder="Seu E-mail" />
+            <small class="form-text text-danger d-none">E-mail obrigatório e/ou inválido</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="password" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-text" placeholder="Sua senha" />
+            <small class="form-text text-danger d-none">Senha obrigatória</small>
+          </div>
+        </div>
+
+        <p id="textLoginMessage" class="text-center">&nbsp;</p>
+        <button type="submit" class="btn btn-block">Entrar</button>
+
+        <div class="d-flex justify-content-between mt-2 jaml-support-login">
+          <a href="#">Cadastrar</a>
+          <a href="#">Recuperar Senha</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/jquery/jquery.mask.js"></script>
+    <script src="libs/slimselect/slimselect.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

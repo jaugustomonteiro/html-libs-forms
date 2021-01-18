@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="libs/slimselect/slimselect.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Register</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="container-form-email" class="container-fluid h-100 w-100 bg-secondary d-flex flex-column justify-content-center align-items-center">
+      <form id="JamlFormRegister" class="jaml-restricted-form" style="width: min(800px, 100%)">
+        <div class="jaml-form-recover-header d-flex flex-column align-items-center">
+          <img class="img-fluid mb-3" src="img/logo.png" alt="Logo" style="width: 120px" />
+          <h2 class="mb-4 text-center">Criar Conta</h2>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-text" placeholder="Seu Nome" style="height: 50px" />
+            <small class="form-text text-danger d-none">Nome obrigatório</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-email" placeholder="Seu Email" style="height: 50px" />
+            <small class="form-text text-danger d-none">Email obrigatório e/ou inválido</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-cpf" placeholder="Seu CPF" style="height: 50px" />
+            <small class="form-text text-danger d-none">CPF obrigatório e/ou inválido</small>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-phone" placeholder="Seu Telefone" style="height: 50px" />
+            <small class="form-text text-danger d-none">Whatsapp obrigatório</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <select id="jamlSelectEstados" class="form-control jaml-form-control jaml-form-valid jaml-form-text jaml-form-state" style="height: 50px"></select>
+            <small class="form-text text-danger d-none">Estado obrigatório</small>
+          </div>
+
+          <div class="form-group col-md-6">
+            <select id="jamlSelectCidades" class="form-control jaml-form-control jaml-form-valid jaml-form-text jaml-form-city" style="height: 50px"></select>
+            <small class="form-text text-danger d-none">Cidade obrigatória</small>
+          </div>
+        </div>
+
+        <!--
+        <div class="form-row">
+          <div class="form-check ml-2 mb-4">
+            <input id="ckeckTerms" type="checkbox" class="form-check-input jaml-form-control jaml-form-valid jaml-form-check" style="margin-top: 6px; border: 2px solid transparent" />
+            <label class="form-check-label text-bold font-italic font-weight-bold" for="ckeckTerms">Li e estou de acordo com os termos e condições</label>
+            <small class="form-text text-danger d-none">Você precisar aceitar os termos e condições</small>
+          </div>
+        </div>
+        -->
+        <button type="submit" class="btn btn-block mb-1 mt-4" style="height: 50px; background: #392466; color: #fff; font-weight: bold">Recuperar Senha</button>
+
+        <p class="font-italic jaml-restricted-message mt-1" style="height: 60px; font-size: 0.8rem"><div class="spinner"></div></p>
+
+        <div class="d-flex justify-content-center jaml-recover-login">
+          <span class="d-flex align-items-center">
+            <i class="bx bx-arrow-back mr-2" style="font-size: 20px"></i>
+            <a href="#">Voltar para Home</a>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/jquery/jquery.mask.js"></script>
+    <script src="libs/slimselect/slimselect.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/citycountry/jaml_estados.js"></script>
+    <script src="libs/citycountry/jaml_cidades.js"></script>
+    <script src="js/jaml-restricted-functions-global.js"></script>
+    <script>
+      (function ($) {
+        var JamlFormRegister = $("#JamlFormRegister");
+
+        JamlFormRegister.find("button").on("click", function (e) {
+          e.preventDefault();
+          if (validateFormRestrictedAccess(JamlFormRegister)) {
+            alert("JamlFormRegister");
+          }
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>

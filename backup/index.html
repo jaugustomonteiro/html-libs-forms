@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="libs/slimselect/slimselect.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-form m-5">
+      <h2>Inscreva-se</h2>
+      <form id="JamlFormLogin">
+        <div class="form-group">
+          <input type="text" name="nome" class="form-control jaml-form-control jaml-form-valid jaml-form-text" typeLabel="Nome" placeholder="Seu nome" />
+          <small class="form-text text-danger d-none">Nome obrigatório</small>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="whatsapp" class="form-control jaml-form-control jaml-form-valid jaml-form-phone" typeLabel="Telefone" placeholder="Seu Whatsapp" />
+          <small class="form-text text-danger d-none">Whatsapp obrigatório</small>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="email" class="form-control jaml-form-control jaml-form-valid jaml-form-email" typeLabel="E-mail" placeholder="Seu E-mail" />
+          <small class="form-text text-danger d-none">E-mail obrigatório e/ou Inválido</small>
+        </div>
+
+        <p id="textMessage" class="text-center">&nbsp;</p>
+        <button type="submit" class="btn btn-block btn-primary">Realizar Inscrição</button>
+
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+
+        <script src="libs/slimselect/slimselect.min.js"></script>
+        <script src="libs/bootstrap/bootstrap.min.js"></script>
+      </form>
+    </div>
+  </body>
+</html>

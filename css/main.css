@@ -1,0 +1,61 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.jaml-restricted-form h2 {
+  color: #ffffff;
+}
+
+.jaml-restricted-form input {
+  border-radius: 8px;
+}
+
+.jaml-restricted-form button {
+  opacity: 0.7;
+  transition: all 0.5s;
+  border-radius: 8px;
+}
+
+.jaml-restricted-form button:hover {
+  opacity: 1;
+}
+
+.jaml-restricted-form .jaml-recover-login span,
+.jaml-restricted-form .jaml-recover-login a {
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.jaml-restricted-form .jaml-recover-login span:hover,
+.jaml-restricted-form .jaml-recover-login a:hover {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  position: relative;
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #746593;
+  border-top-color: #392466;
+  animation: spinner 0.6s linear infinite;
+}
